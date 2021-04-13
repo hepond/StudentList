@@ -1,1 +1,22 @@
-<p>form works!</p>
+<h1 mat-dialog-title> {{data.formAction}} Student</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <h2>What's your Roll No.?</h2>
+    <mat-label for="roll">Roll No</mat-label>
+    <input matInput name="roll" [(ngModel)]="data.xid">
+    <h2>What's your Firstname?</h2>
+    <mat-label for="firstname">Firstname</mat-label>
+    <input matInput name="firstname" [(ngModel)]="data.xfname">
+    <p>What's your Lastname?</p>
+    <mat-label for="lastname">Lastname</mat-label>
+    <input matInput name="lastname" [(ngModel)]="data.xlname">
+    <p>What's your Gender?</p>
+    <mat-label for="gender">Gender</mat-label>
+    <input matInput name="gender" [(ngModel)]="data.xgender">
+
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.xfname" cdkFocusInitial>Ok</button>
+</div>
